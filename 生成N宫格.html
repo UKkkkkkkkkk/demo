@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="div2">
+    <div id="div1"></div>
+</div>
+
+<input id="input" type="text" value="">
+<button type="button" onclick="sort()">排序</button>
+</body>
+</html>
+<script src="jquery-1.11.3.min.js"></script>
+<script>
+    function sort(){
+        var input=document.getElementById("input");
+        console.log(input.value);
+
+        for(var i=0;i<input.value;i++){
+            var frg=document.createDocumentFragment();
+            for(var j=0;j<input.value;j++){
+                var div = document.createElement("div");
+                div.style.height=50+'px';
+                div.style.width=50+'px';
+                div.style.background='red';
+                div.style.float='left';
+                div.style.margin=2+'px'
+                frg.appendChild(div)
+            }
+            div1.style.width=input.value*54+"px"
+            div1.appendChild(frg)
+            frg=null;
+        }
+        div2.appendChild(div1);
+    }
+</script>
